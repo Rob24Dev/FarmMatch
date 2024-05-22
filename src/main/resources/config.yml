@@ -1,0 +1,191 @@
+eventHour: 4
+
+minTime: 2
+maxTime: 10
+
+minPlayersStart: 10
+
+events:
+  plant: true
+  collect: true
+
+plantEventItems:
+  - 'POTATO'
+  - 'CARROT'
+  - 'WHEAT'
+  - 'MELON_STEM'
+  - 'PUMPKIN_STEM'
+  - 'NETHER_WART'
+
+plantItemsNames:
+  - 'BRAMBOR'
+  - 'MRKVÍ'
+  - 'SEMÍNEK TRÁVY'
+  - 'SEMÍNEK MELOUNU'
+  - 'SEMÍNEK DÝNĚ'
+  - 'NETHER WARTU'
+
+collectEventItems:
+  - 'POTATO'
+  - 'CARROT'
+  - 'WHEAT'
+  - 'MELON'
+  - 'PUMPKIN'
+  - 'NETHER_WART'
+
+collectItemsNames:
+  - 'BRAMBOR'
+  - 'MRKVÍ'
+  - 'TRÁVY'
+  - 'MELOUNU'
+  - 'DÝNĚ'
+  - 'NETHER WARTU'
+
+messages:
+  prefix: '&6Farmaření &8|'
+  noPermission: '&fUnkown Command'
+  reloadCommand:
+    reloading: '%prefix% &7Znovu načítám všechny soubory...'
+    reloaded: '%prefix% &7Všechny soubory byly &aúspěšně &7znovu načteny&7.'
+  progressActionBar: '%prefix% &7Nyní máš &6%amount% &7bod%CzechReplace% v eventu.'
+  remainingEventTimeFormat: '&6%minuty%&8m&7 a &6%sekundy%&8s &7zbývá'
+  timeCommand:
+    message: '%prefix% &7Další turnaj bude za: %remainingTimeToEvent%'
+    remainingTimeToEventFormat: '&6%hodiny%&8h&7, &6%minuty%&8m&7 a &6%sekundy%&8s'
+    eventAlreadyExists: '%prefix% &7Nyní probíhá &6Farmářský EVENT.&7 Pro více informací: &7&n/fm info'
+    littlePlayers: '%prefix% &7Na &6Farmářský EVENT&7 je málo hráčů.'
+  infoCommand:
+    message:
+      collectEvent:
+        - ''
+        - '%center%%prefix% &7Nyní probíhá farmářský &6&nEVENT&8'
+        - ''
+        - '%center%&6Informace:&8'
+        - '%center%&6● Tvůj úkol: &6Je sesbírat&6, co nejvíce &n%eItemName%.&8'
+        - '%center%&6● Čas: %remainingTime%.&8'
+        - '%center%&6● Tvoje pozice: %pos%.&8'
+        - '%center%&6● Body: %value%.&8'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Collected%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Collected%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Collected%'
+        - ''
+      plantEvent:
+        - ''
+        - '%center%%prefix% &7Nyní probíhá farmářský &6&nEVENT&8'
+        - ''
+        - '%center%&6Informace:&8'
+        - '%center%&6● Tvůj úkol: &6Je zasadit&6, co nejvíce &n%eItemName%.&8'
+        - '%center%&6● Zbývá: %remainingTime%.&8'
+        - '%center%&6● Tvoje pozice: %pos%.&8'
+        - '%center%&6● Body: %value%.&8'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Planted%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Planted%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Planted%'
+        - ''
+    eventNotExists: '%prefix% &7Aktuálně není žádný &6farmářský EVENT.&7 Pokud chceš vědět, kdy bude další: &7&n/fm time'
+  boneMealUse: '%prefix% &7Zde byl použit &6bonemeal,&7 tedy se tento blok&6 nepočítá jako bod do eventu.'
+  eventStart:
+    message:
+      collectEvent:
+        - ''
+        - '%center%%prefix% &7Začíná farmářský &6&nEVENT&8'
+        - '%center%&6Úkolem je sesbírat&6, co nejvíce &n%eItemName%.&8'
+        - ''
+        - '%center%&6● Čas: &7%time% &6min.&8'
+        - ''
+        - '%center%&6&lBonemeal je zakázan.'
+        - '%center%&6&nNejlepší sběrači dostatnou odměnu.&8'
+        - '%center%&6Jste ready? Držím palce!'
+        - ''
+      plantEvent:
+        - ''
+        - '%center%%prefix% &7Začíná farmářský &6&nEVENT&8'
+        - '%center%&6Úkolem je zasadit&6, co nejvíce &n%eItemName%.&8'
+        - ''
+        - '%center%&6 ● Čas: &7%time% &6min.&8'
+        - ''
+        - '%center%&6&lPři eventu je zakázané používat bonemeal.'
+        - '%center%&6&nNejlepší sběrači dostatnou odměnu.&8'
+        - '%center%&6Jste ready? Držím palce!'
+        - ''
+    bossBar:
+      collectEvent:
+        title: '&6Farmaření &8| &7Sesbírací Event: %remainingTime%'
+        color: 'YELLOW'
+        style: 'SOLID'
+      plantEvent:
+        title: '&6Farmaření &8| &7Pěstitelský Event: %remainingTime%'
+        color: 'YELLOW'
+        style: 'SOLID'
+  joinInEvent: '%prefix% &7Ahoj, právě probíhá event o &n%eventName%&7, co nejvíce &n%ItemName%&7. Bohužel si se připojil později, tedy nemáš &n%time%&7 min času. Hodně štěstí!'
+  adminStopEvent: "%prefix% &7Admin stopl &6event předčasně."
+  eventInProgress:
+    message:
+      collectEvent:
+        - ''
+        - '%center%%prefix% &7Stav Farmářského &6&nEVENTU&8'
+        - ''
+        - '%center%&6Zatím nejlepší sběratelé jsou:'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Collected%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Collected%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Collected%'
+        - ''
+        - '%center%&6&nDokážeš je předehnat?&7'
+        - '%center%&6Úkolem je sesbírat&6, co nejvíce &n%eItemName%.'
+        - '%center%&6&7Jsi na pozici &6&n%pos%&7 s &6&n%value%&7 bod%CzechReplace%'
+        - ''
+      plantEvent:
+        - ''
+        - '%center%%prefix% &7Stav Farmářského &6&nEVENTU&8'
+        - ''
+        - '%center%&6Zatím nejlepší pěstitelé jsou:'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Planted%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Planted%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Planted%'
+        - ''
+        - '%center%&6&nDokážeš je předehnat?&7'
+        - '%center%&6Úkolem je zasadit&6, co nejvíce &n%eItemName%.'
+        - '%center%&6&7Jsi na pozici &6&n%pos%&7 s &6&n%value% &7bod%CzechReplace%'
+        - ''
+  eventEnd:
+    message:
+      collectEvent:
+        - ''
+        - '%center%%prefix% &7Skončil Farmářský &6&nEVENT&8'
+        - '%center%&6Nejlepší sběratelé:'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Collected%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Collected%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Collected%'
+        - ''
+        - '%center%&6&nOdměny byly rozdány.&7'
+        - ''
+      plantEvent:
+        - ''
+        - '%center%%prefix% &7Skončil Farmářský &6&nEVENT&8'
+        - '%center%&6Nejlepší pěstitelé:'
+        - ''
+        - '%center%&6➀ %1PlayerName% &8| &6%1Planted%'
+        - '%center%&6➁ %2PlayerName% &8| &6%2Planted%'
+        - '%center%&6➂ %3PlayerName% &8| &6%3Planted%'
+        - ''
+        - '%center%&6&nOdměny byly rozdány.&7'
+        - ''
+    reward:
+      1:
+        - "give %player% diamond 5"
+      2 :
+        - "give %player% diamond 4"
+      3:
+        - "give %player% diamond 3"
+      rewardForPlaying:
+        - "give %player% diamond 2"
+    playerCollectedRewardMessage:
+      1: '%prefix% &7Obdržel si 5 diamantů za&6 1. &7místo v &6Farmářském Eventu.'
+      2: '%prefix% &7Obdržel si 4 diamanty za&6 2. &7místo v &6Farmářském Eventu.'
+      3: '%prefix% &7Obdržel si 3 diamanty za&6 3. &7místo v &6Farmářském Eventu.'
+      rewardForPlaying: '%prefix% &7Obdržel si &62. &7diamanty v &6Farmářském Eventu &7za účast. Děkujeme :)'

@@ -1,0 +1,7 @@
+name: FarmMatch
+version: '1.0'
+main: cz.rob24dev.farmmatch.Main
+api-version: '1.13'
+commands:
+  fm:
+    description: Main Command
