@@ -1,3 +1,2 @@
 # FarmMatch
- Plugin pro farmářské turnaje inspirován PyroFishingem. Myšlenka pluginu: Poly_y, Fajr_
- Tvorba: 2023
+Farm tournament plugin inspired by PyroFishing. Plugin idea: Poly_y, Fajr_ Creation: 2023
